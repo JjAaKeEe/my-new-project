@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -20,15 +24,26 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@rainier/core": ["../../packages/core/src/index.ts"],
-      "@rainier/core/*": ["../../packages/core/src/*"],
-      "@/*": ["./*"]
+      "@rainier/core": [
+        "../../packages/core/src/index.ts"
+      ],
+      "@rainier/core/*": [
+        "../../packages/core/src/*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", ".next"]
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
 }
