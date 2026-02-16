@@ -1,0 +1,126 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.topGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 980px) {
+  .topGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.panel {
+  border: 1px solid #d4d7dd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.88rem;
+}
+
+.form input {
+  border: 1px solid #c4c9d1;
+  border-radius: 8px;
+  padding: 0.45rem 0.5rem;
+  font-size: 0.92rem;
+}
+
+.toggleRow {
+  display: flex !important;
+  align-items: center;
+  gap: 0.45rem !important;
+}
+
+.form button {
+  margin-top: 0.25rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.resultsGrid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.resultsGrid div {
+  border: 1px solid #e1e5ec;
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.resultsGrid span {
+  font-size: 0.78rem;
+  color: #4b5563;
+}
+
+.resultsGrid strong {
+  font-size: 1rem;
+}
+
+.placeholder {
+  margin: 0;
+  color: #525967;
+}
+
+.error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+.methodology {
+  margin: 0 0 0.7rem;
+  color: #172033;
+  line-height: 1.4;
+}
+
+.pre {
+  margin: 0.6rem 0 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 0.75rem;
+  max-height: 360px;
+  overflow: auto;
+  font-size: 0.78rem;
+}

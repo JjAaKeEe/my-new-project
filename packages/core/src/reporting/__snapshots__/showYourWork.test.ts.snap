@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`showYourWork > returns deterministic worksheet and EMBA-ready narrative for a sample panel 1`] = `
+{
+  "assumptions": {
+    "bulkDensityKgPerCubicMeter": 2000,
+    "carbonCapturePotentialPerKgRecovered": 0.00003,
+    "co2AvoidedPerKgRecovered": 0.00012,
+    "dieselEmissionFactorKgCO2ePerGallon": 10.21,
+    "dieselTruckMpg": 6,
+    "haulShareOfNonLaborCost": 0.6,
+    "inferredRecoveryRate": 0.8,
+    "laborRateUsdPerHour": 40,
+    "milesPerTrip": 30,
+  },
+  "deterministic": true,
+  "input": {
+    "materialRecoveredKg": 8200,
+    "totalCostUsd": 1010,
+    "totalEmissionsTonsCO2e": 0.55,
+    "totalTimeHours": 9,
+    "truckTrips": 5,
+  },
+  "intermediates": {
+    "emissions": {
+      "avoidedEmissionsTonsCO2e": 0.434,
+      "dieselTailpipeEstimateTonsCO2e": 0.25525,
+      "factors": {
+        "carbonCapturePotentialPerKgRecovered": 0.00003,
+        "co2AvoidedPerKgRecovered": 0.00012,
+        "dieselEmissionFactorKgCO2ePerGallon": 10.21,
+        "operationalTonsCO2eFromSimulation": 0.55,
+      },
+      "netClimateBenefitTonsCO2e": 0.13,
+      "uptakeEstimateTonsCO2e": 0.246,
+    },
+    "financial": {
+      "costPerRecoveredKgUsd": 0.123171,
+      "costPerRecoveredTonUsd": 123.170732,
+      "costPerTripUsd": 202,
+      "haulCostUsd": 390,
+      "laborCostUsd": 360,
+      "nonLaborCostUsd": 650,
+      "processingCostUsd": 260,
+      "totalCostUsd": 1010,
+    },
+    "material": {
+      "inboundKg": 10250,
+      "inboundVolumeM3": 5.125,
+      "recoveredKg": 8200,
+      "recoveredVolumeM3": 4.1,
+      "residualKg": 2050,
+      "residualVolumeM3": 1.025,
+    },
+    "transport": {
+      "dieselGallonsEstimate": 25,
+      "milesPerTrip": 30,
+      "totalMiles": 150,
+      "trips": 5,
+    },
+  },
+  "version": "1.0",
+}
+`;
+
+exports[`showYourWork > returns deterministic worksheet and EMBA-ready narrative for a sample panel 2`] = `
+"Methodology (deterministic worksheet v1.0)
+Start from simulation outputs: recovered mass 8200.00 kg, 5 truck trips, total cost 1010.00 USD, total operational emissions 0.5500 tCO2e, and modeled time 9.00 hours.
+Infer inbound and residual mass with an explicit recovery-rate assumption (0.8000): inbound = recovered / recovery rate = 10250.00 kg; residual = inbound - recovered = 2050.00 kg.
+Convert mass to volumes using bulk density 2000.00 kg/m3: inbound 5.1250 m3, recovered 4.1000 m3, residual 1.0250 m3.
+Estimate transport fuel by applying miles-per-trip 30.00 and diesel efficiency 6.00 mpg: total miles 150.00, diesel gallons 25.0000. Diesel tailpipe emissions use 10.2100 kgCO2e/gal, yielding 0.2553 tCO2e.
+Apply environmental factors explicitly: avoided emissions factor 0.000120 tCO2e/kg and uptake factor 0.000030 tCO2e/kg. This yields avoided emissions 0.4340 tCO2e and uptake estimate 0.2460 tCO2e.
+Compute net climate benefit as avoided + uptake - operational = 0.1300 tCO2e.
+Decompose cost deterministically with labor-rate assumption 40.00 USD/h and haul-share assumption 0.6000 of non-labor cost: labor 360.00 USD, haul 390.00 USD, processing 260.00 USD.
+Unitized economics: 202.00 USD/trip, 0.1232 USD/kg recovered, and 123.17 USD/ton recovered."
+`;

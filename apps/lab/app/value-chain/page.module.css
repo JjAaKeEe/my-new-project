@@ -1,0 +1,94 @@
+.page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header p {
+  margin: 0.35rem 0 0;
+  color: #475569;
+  max-width: 72ch;
+  line-height: 1.4;
+}
+
+.section {
+  border: 1px solid #d5dce7;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.sequenceStep {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.sequenceLabel {
+  display: inline-block;
+  padding: 0.32rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #c9d4e4;
+  background: #f8fbff;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.sequenceArrow {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+}
+
+.nodeCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 0.68rem;
+  background: #ffffff;
+}
+
+.nodeCard h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.96rem;
+}
+
+.metaLabel {
+  margin: 0.28rem 0 0.08rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #556076;
+}
+
+.metaValue {
+  margin: 0;
+  line-height: 1.35;
+  font-size: 0.84rem;
+  color: #111827;
+}

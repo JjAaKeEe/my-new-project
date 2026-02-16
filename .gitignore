@@ -13,6 +13,7 @@ pnpm-debug.log*
 
 # env
 .env*
+# keep example env file if you use one later
 !.env.example
 
 # misc
